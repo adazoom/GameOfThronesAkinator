@@ -1,0 +1,195 @@
+     <expr type="binary">
+        <question value="Are you a Lannister or have an immediate official relationship to the one of them?"/>
+	<!--YES I am Lannister-->
+	<expr type="binary">
+	  <question value="Have you ascended the Iron Throne?"/>
+	  <!--YES I am on the Throne-->
+	   <expr type="binary">
+	    <question value="Are you under 30?"/>
+	    <!--YES I am alive-->
+	      <expr type="answer">
+	       <answer value="You are the King Joffrey"/>
+	      </expr>
+	    <!--NO I am not alive-->
+	      <expr type="answer">
+		<answer value="You are Robert Baratheon"/>
+	      </expr>
+	      </expr>
+	  <!--NO I am not on the Throne-->
+	   <expr type="binary">
+	     <question value="Did you fight in the battle?"/>
+	     <!--YES I have fight-->
+	      <expr type="binary">
+		 <question value="Are you wise?"/>
+		 <!--YES I am wise-->
+		<expr type="binary">
+		  <question value="Are you small?"/>
+		    <!--YES I am small and super cool-->
+		  <expr type="answer">
+		     <answer value="You are Tyrion Lannister, the Halfman"/>
+		  </expr>
+		    <!--NO I am not small but still cool-->
+		  <expr type="answer">
+		     <answer value="You are Tywin Lannister"/>
+		  </expr>
+		 </expr>
+	        <!--NO I am not wise-->
+	       <expr type="answer">
+		     <answer value="You are Jamie Lannister"/>
+	       </expr>
+	     </expr>
+	      <!--NO I haven't fight-->
+	       <expr type="answer">
+		     <answer value="You are Cersei Lannister"/>
+	       </expr>
+	   </expr>
+         </expr>
+	 <!--NO I am not Lannister--> 
+         <expr type="binary">
+         <question value="Have you ever served the King Joffrey or was going to be his Queen?"/>
+	  <!--YES I served the King-->
+	  <expr type="binary">
+	    <question value="Have you fought with a sword?"/>
+	    <!--YES I have fight with the sword--> 
+	    <expr type="binary">
+	      <question value="Ever was the Hand of the King?"/>
+	      <!--YES the Hand-->
+		  <expr type="answer">
+		     <answer value="You are Eddar Stark, The Lord of Winterfell"/>
+		  </expr>
+		   <!--NO not the Hand-->
+		  <expr type="answer">
+		     <answer value="You are Sandar Clegane, The Hound"/>
+		  </expr>
+	         </expr>
+		 <!--NO I haven't fought with the sword-->
+		 <expr type="binary">
+		  <question value="Had a betrothal with the King Joffrey?"/>
+		  <!--YES was had betrothal-->
+		  <expr type="binary">
+		     <question value="Previously was a Queen?"/>
+		     <!--YES was a queen-->
+		     <expr type="answer">
+		       <answer value="You are Margaery Tyrell"/>
+		     </expr>
+		   <!--NO wasnt a queen before-->
+		  <expr type="answer">
+		     <answer value="You are Sansa Stark"/>
+		  </expr>
+		  </expr>
+		   <!--NO had not betrothal-->
+		 <expr type="binary">
+		  <question value="Ever was castrated?"/>
+		  <!--YES was castrated-->
+		  <expr type="answer">
+		     <answer value="You are Varys, The Master of Whisperers and The Spider"/>
+		  </expr>
+		   <!--NO still a man-->
+		  <expr type="answer">
+		     <answer value="You are Petyr Baelish,The Littlefinger"/>
+		  </expr>
+	         </expr>
+		 </expr>
+	       </expr>
+ 	     <!--NO I haven't served the King-->
+	   <expr type="binary">
+	    <question value="Do you fight againist the King Joffrey or are a Stark?"/>
+	     <!--YES I am againist the King-->
+	     <expr type="binary">
+	       <question value="Do you claim the Iron Throne?"/>
+	     <!--YES I claim the Thorne-->
+	       <expr type="binary">
+	       <question value="Do you belong to the Baratheon House?"/>
+	       <!--YES I am Baratheon-->
+	         <expr type="binary">
+		   <question value="Have you been killed by a mysterious witchcraft?"/>
+		   <!--YES I am killed-->
+		   <expr type="answer">
+		     <answer value="You are Renly Baratheon"/>
+		  </expr>
+		   <!--NO I am alive-->
+		  <expr type="answer">
+		     <answer value="You are Stannis Baratheon"/>
+		  </expr>
+		</expr>
+		<!--NO I am not Baratheon-->
+		<expr type="binary">
+		   <question value="Are you a male?"/>
+		   <!--YES I am man-->
+		   <expr type="answer">
+		     <answer value="You are Robb Stark"/>
+		  </expr>
+		   <!--NO I am woman-->
+		  <expr type="answer">
+		     <answer value="You are Daenerys Stormborm of House Targaryens"/>
+		  </expr>
+		</expr>
+	       </expr>
+	       <!--NO I dont claim the Thorne-->
+	        <expr type="binary">
+		   <question value="Are you a child?"/>
+		   <!--YES I am a child-->
+		   <expr type="binary">
+		   <question value="Can you walk?"/>
+		    <!--YES i walk-->
+		    <expr type="answer">
+		     <answer value="You are Arya Stark"/>
+		    </expr>
+		   <!--NO I am Bran-->
+		   <expr type="answer">
+		     <answer value="You are Bran Stark"/>
+		   </expr>
+		</expr>
+		 <!--NO I am not a child-->
+		 <expr type="answer">
+		     <answer value="You are Catelyn Stark"/>
+		  </expr>
+		</expr>
+	     </expr>
+	     <!--NO I am not againist the King-->
+	          <expr type="binary">
+		   <question value="Have you lived in the Winterfell?"/>
+		   <!--YES I lived in Winterfell-->
+		  <expr type="binary">
+		   <question value="Are you a bastard?"/>
+		   <!--YES I am a bastard-->
+		   <expr type="answer">
+		     <answer value="You are Jon Snow "/>
+		   </expr>
+		 <!--NO I am not a bastard-->
+		 <expr type="answer">
+		     <answer value="You are Theon Greyjoy"/>
+		  </expr>
+		</expr>
+		<!--NO I havent live in Winterfell-->
+		   <expr type="binary">
+		   <question value="Have you lived beyond the Narrow Sea?"/>
+		   <!--YES I lived in beyond-->
+		  <expr type="binary">
+		   <question value="Are you dead?"/>
+		   <!--YES I am dead-->
+		   <expr type="answer">
+		     <answer value="You are Khal Drogo "/>
+		   </expr>
+		 <!--NO I am alive-->
+		 <expr type="answer">
+		     <answer value="You are Jorah Mormont"/>
+		  </expr>
+		</expr>
+		 <!--NO I havent lived in beyond-->
+		<expr type="binary">
+		   <question value="Are you a human?"/>
+		   <!--YES I am human-->
+		   <expr type="answer">
+		     <answer value="You are Ygritte "/>
+		   </expr>
+		 <!--NO I am not-->
+		 <expr type="answer">
+		     <answer value="You are a White Walker"/>
+		  </expr>
+		</expr>
+	    </expr>
+	   </expr>
+	  </expr>
+	 </expr>
+       </expr>
